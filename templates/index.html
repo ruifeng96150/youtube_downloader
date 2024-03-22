@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="/static/style.css" />
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <title>Youtobe下载</title>
+    <script type="module">
+        import { createApp } from '/static/petite-vue_0.4.1.js';
+        import { Container } from "/static/main.js"
+        createApp({ Container }).mount()
+    </script>
+</head>
+
+<body>
+    <div v-scope="Container()" @vue:mounted="mounted">
+        <div class="header">
+            <div class="title">Youtube下载</div>
+            <div class="form">
+                <input type="text" v-model="name" class="iname" placeholder="请输入视频名称">
+                <input type="text" v-model="url" class="iurl" placeholder="请输入Youtube视频地址">
+                <button type="submit" @click="onSubmit">提交</button>
+            </div>
+            <div class="hint">{{hint}}</div>
+        </div>
+        <table v-if="data.length>0">
+            <thead>
+                <tr>
+                    <th>标题</th>
+                    <th>原标题</th>
+                    <th>分辨率</th>
+                    <th>时长</th>
+                    <th>视频大小</th>
+                    <th>下载时间</th>
+                    <th>查看数</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="item in data">
+                    <td>
+                        {{ item.path }}
+                    </td>
+                    <td>
+                        <a :href="item.URL" target="_blank"> {{ item.Title }}</a>
+                    </td>
+                    <td>{{ item.Resolution }}</td>
+                    <td>{{ item.Duration }}</td>
+                    <td>{{ item.Size }}</td>
+                    <td>{{ item.Datetime }}</td>
+                    <td>{{ item.Views }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

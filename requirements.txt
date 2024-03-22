@@ -1,0 +1,5 @@
+fastapi==0.110.0
+opencv_python==4.8.0.76
+python-socketio==5.11.1
+uvicorn==0.29.0
+youtube_dl.egg==info

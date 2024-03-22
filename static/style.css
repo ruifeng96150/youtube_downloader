@@ -1,0 +1,85 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+}
+
+.header input {
+    outline: none;
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.header .title {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 50px;
+    margin-right: 35px;
+}
+
+.header .iname {
+    width: 250px;
+}
+
+.header .iurl {
+    width: 550px;
+}
+
+.header .form {
+    line-height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header button {
+    height: 36px;
+    width: 80px;
+    font-size: 20px;
+}
+
+.header .hint {
+    line-height: 50px;
+    margin-left: 10px;
+    color: red;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table caption {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 1em 0;
+}
+
+th,
+td {
+    border: 1px solid #999;
+    text-align: center;
+    padding: 2px 0;
+}
+
+table thead tr {
+    background-color: #008c8c;
+    color: #fff;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: #eee;
+}
+
+table tbody tr:hover {
+    background-color: #ccc;
+}
+
+table tfoot tr td {
+    text-align: right;
+    padding-right: 20px;
+}
+
+table tr td img {
+    max-width: 80px;
+}
